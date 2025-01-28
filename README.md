@@ -6,7 +6,7 @@ Sending Bulk SMS with Oracle Apex (http://apex.oracle.com) without SSL/Wallet Co
         L_CLOB       CLOB;
         V_MSG        VARCHAR2 (4000);
         P_REICEVER   VARCHAR (4000) := 'Your Comma seperated Numbers Goes here';
-        P_MESSAGE    VARCHAR2 (4000) := 'Your Message Goes Here';
+        P_MESSAGE    VARCHAR2 (2000) := 'Your Message Goes Here';
         P_TOKEN      VARCHAR2 (50) := 'Your Token Goes Here';
     BEGIN
             SELECT    '%'
