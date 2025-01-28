@@ -29,8 +29,7 @@ Token:       API Provider will provide unique token, that need to use here.
     
        L_CLOB :=
             APEX_WEB_SERVICE.MAKE_REST_REQUEST (
-                P_URL           =>
-                       'http://api.greenweb.com.bd/api.php?token='|| p_token|| ''
+                P_URL => 'http://api.greenweb.com.bd/api.php?token='|| p_token|| ''
                     || CHR (38)|| 'to='|| P_REICEVER|| ''
                     || CHR (38)|| 'message='|| V_MSG|| '',
                 P_HTTP_METHOD   => 'GET');
