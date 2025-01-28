@@ -1,5 +1,5 @@
 # APEX_BULK_SMS
-Sending Bulk SMS with Oracle Apex (http://apex.oracle.com) without SSL/Wallet Configuration.
+Sending Bulk SMS with Oracle Apex (http://apex.oracle.com) without SSL/Wallet Configuration. 
 
 
     DECLARE
@@ -9,8 +9,7 @@ Sending Bulk SMS with Oracle Apex (http://apex.oracle.com) without SSL/Wallet Co
         P_MESSAGE    VARCHAR2 (2000) := 'Your Message Goes Here';
         P_TOKEN      VARCHAR2 (50) := 'Your Token Goes Here';
     BEGIN
-            SELECT    '%'
-                   || LISTAGG (SUBSTR (RAWTOHEX (P_MESSAGE), LEVEL * 2 - 1, 2), '%')
+            SELECT '%'|| LISTAGG (SUBSTR (RAWTOHEX (P_MESSAGE), LEVEL * 2 - 1, 2), '%')
                           WITHIN GROUP (ORDER BY LEVEL)    "URI_ENCODED"
               INTO V_MSG
               FROM DUAL
@@ -28,3 +27,8 @@ Sending Bulk SMS with Oracle Apex (http://apex.oracle.com) without SSL/Wallet Co
                     || CHR (38)|| 'message='|| V_MSG|| '',
                 P_HTTP_METHOD   => 'GET');
     END;
+
+
+Oracle Apex we can't access HTTPS protocols without having SSL / Wallets. But if API supports HTTP Request then we can send Bulk SMS using BDBULKSMS.NET / GREENWEB.COM.BD. 
+
+Put this code into dynamic action / after submit process. 
