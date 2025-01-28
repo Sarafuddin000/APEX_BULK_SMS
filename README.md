@@ -23,28 +23,8 @@ Sending Bulk SMS with Oracle Apex (http://apex.oracle.com) without SSL/Wallet Co
        L_CLOB :=
             APEX_WEB_SERVICE.MAKE_REST_REQUEST (
                 P_URL           =>
-                       'http://api.greenweb.com.bd/api.php?token='
-                    || p_token
-                    || ''
-                    || CHR (38)
-                    || 'to='
-                    || P_REICEVER
-                    || ''
-                    || CHR (38)
-                    || 'message='
-                    || V_MSG
-                    || '',
+                       'http://api.greenweb.com.bd/api.php?token='|| p_token|| ''
+                    || CHR (38)|| 'to='|| P_REICEVER|| ''
+                    || CHR (38)|| 'message='|| V_MSG|| '',
                 P_HTTP_METHOD   => 'GET');
-                
-        --        DBMS_OUTPUT.put_line (
-        --               'http://api.greenweb.com.bd/api.php?token='||p_token||''
-        --            || CHR (38)
-        --            || 'to='
-        --            || P_REICEVER
-        --            || ''
-        --            || CHR (38)
-        --            || 'message='
-        --            || V_MSG
-        --            || '');
-    
     END;
