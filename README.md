@@ -1,7 +1,7 @@
 # APEX_BULK_SMS
 Sending Bulk SMS with Oracle Apex (http://apex.oracle.com) without SSL/Wallet Configuration. 
 Oracle Apex we can't access HTTPS protocols without having SSL / Wallets. But if API supports HTTP Request then we can send Bulk SMS using BDBULKSMS.NET / GREENWEB.COM.BD. 
-<br>
+<br><br><br><br><br>
 Reciever:    may have a single number or comma separated multiple number, or you can use loops.
 
 Message:     You can use Engilsh / Bengali Unicode to write SMSs
